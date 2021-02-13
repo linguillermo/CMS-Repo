@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clinica Abeleda | Treatment Records</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+
+    <!-- FooTable -->
+    <link href="css/plugins/footable/footable.core.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element">
+                        <img alt="image" class="rounded-circle" src="img/New Project.png"/>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="block m-t-xs font-bold">Rochelle Abeleda</span>
+                            <span class="text-muted text-xs block">Doctor <b class="caret"></b></span>
+                        </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                            <li><a class="dropdown-item" href="contacts.html">Contacts</a></li>
+                            <li><a class="dropdown-item" href="mailbox.html">Mailbox</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                        CA
+                    </div>
+                </li>
+                <li>
+                    <a href="doctor-dashboard.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
+                    
+                </li>
+                <li class="active">
+                    <a href="#"><i class="fa fa-table"></i> <span class="nav-label">Patients</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="doctor-patient-records.html">Patient Records</a></li>
+                        <li class="active"><a href="doctor-treatment-records.html">Treatment Records</a></li>
+                        <li><a href="doctor-prescription-records.html">Prescription Records</a></li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="doctor-approved-appointments.html"><i class="fa fa-calendar"></i> <span class="nav-label">Appointments</span>  </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+        <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+            <form role="search" class="navbar-form-custom" action="search_results.html">
+                <div class="form-group">
+                    <input type="text" placeholder="" class="form-control" name="top-search" id="top-search">
+                </div>
+            </form>
+        </div>
+        <ul class="nav navbar-top-links navbar-right">
+            <li>
+                <span class="m-r-sm text-muted welcome-message">Welcome to Clinica Abeleda</span>
+            </li>
+            
+            
+
+
+            <li>
+                <a href="login.html">
+                    <i class="fa fa-sign-out"></i> Log out
+                </a>
+            </li>
+            
+        </ul>
+
+        </nav>
+        </div>
+            
+        <div class="wrapper wrapper-content animated fadeInRight">
+
+            
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox ">
+                        <div class="ibox-title">
+                            <h5>Treatment Records</h5>
+                            
+
+                        </div>
+                        <div class="ibox-content">
+                            <input type="text" class="form-control form-control-sm m-b-xs" id="filter"
+                                   placeholder="Search...">
+
+                            <table class="footable table table-stripped" data-page-size="14" data-filter=#filter>
+                                <thead>
+                                    <tr>
+                                        <th>Name </th>
+                                        <th>Address </th>
+                                        <th>Phone No</th>                                        
+                                        <th>Date</th>
+                                        <th>Time</th>                                     
+                                        <th>Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>                                    
+                                            <td>Benedict Cruz</td>
+                                            <td>Quezon City</td>
+                                            <td>09173457658</td>
+                                            <td>December 18, 2020</td>
+                                            <td>8:00 AM</td>                                   
+                                            <td><a href="sample-patient.html" class="btn btn-primary btn-xs">View</a></td>
+                                        </tr>
+                                        <tr>                                  
+                                            <td>Alice Jimenez</td>
+                                            <td>Pasay City</td>
+                                            <td>09056457865</td>
+                                            <td>December 18, 2020</td>
+                                            <td>9:00 AM</td>                                   
+                                            <td><button class="btn btn-primary btn-xs" aria-expanded="false">View</button></td>
+                                        </tr>
+                                        <tr>                                   
+                                            <td>Carl Atienza</td>
+                                            <td>Pasig City</td>
+                                            <td>09192344335</td>
+                                            <td>December 18, 2020</td>
+                                            <td>10:00 AM</td>                                   
+                                            <td><button class="btn btn-primary btn-xs" aria-expanded="false">View</button></td>
+                                        </tr>
+                                        <tr>                                 
+                                            <td>James Suarez</td>
+                                            <td>Cabanatuan City</td>
+                                            <td>09153374564</td>
+                                            <td>December 18, 2020</td>
+                                            <td>11:00 AM</td>                                   
+                                            <td><button class="btn btn-primary btn-xs" aria-expanded="false">View</button></td>
+                                        </tr>
+                                        <tr>                                   
+                                            <td>Patrick Garcia</td>
+                                            <td>Quezon City</td>
+                                            <td>09164667654</td>
+                                            <td>December 18, 2020</td>
+                                            <td>12:00 PM</td>                                   
+                                            <td><button class="btn btn-primary btn-xs" aria-expanded="false">View</button></td>
+                                        </tr>
+                                        <tr>                                   
+                                            <td>Anna Castro</td>
+                                            <td>Makati City</td>
+                                            <td>09275567896</td>
+                                            <td>December 18, 2020</td>
+                                            <td>1:00 PM</td>                                    
+                                            <td><button class="btn btn-primary btn-xs" aria-expanded="false">View</button></td>
+                                        </tr>
+                                        <tr>                                    
+                                            <td>Bon Martinez</td>
+                                            <td>Pasig City</td>
+                                            <td>09167859954</td>
+                                            <td>December 18, 2020</td>
+                                            <td>2:00 PM</td>                                   
+                                            <td><button class="btn btn-primary btn-xs" aria-expanded="false">View</button></td>
+                                        </tr>
+                                        <tr>                                   
+                                            <td>Linette Guillermo</td>
+                                            <td>Caloocan City</td>
+                                            <td>09156473885</td>
+                                            <td>December 18, 2020</td>
+                                            <td>3:00 PM</td>                                    
+                                            <td><button class="btn btn-primary btn-xs" aria-expanded="false">View</button></td>
+                                        </tr>
+                                        <tr>                                    
+                                            <td>Armand Betan</td>
+                                            <td>Makati City</td>
+                                            <td>09467583345</td>
+                                            <td>December 18, 2020</td>
+                                            <td>4:00 PM</td>                                  
+                                            <td><button class="btn btn-primary btn-xs" aria-expanded="false">View</button></td>
+                                        </tr>
+                                        <tr>                                   
+                                            <td>Angelo Madamba</td>
+                                            <td>Pasay City</td>
+                                            <td>09173347654</td>
+                                            <td>December 18, 2020</td>
+                                            <td>4:30 PM</td>                                  
+                                            <td><button class="btn btn-primary btn-xs" aria-expanded="false">View</button></td>
+                                        </tr>
+                                        <tr>                                   
+                                            <td>Miko Gatchalian</td>
+                                            <td>Cabanatuan City</td>
+                                            <td>09153445434</td>
+                                            <td>December 18, 2020</td>
+                                            <td>5:00 PM</td>                                  
+                                            <td><button class="btn btn-primary btn-xs" aria-expanded="false">View</button></td>
+                                        </tr>
+                                        <tr>                                    
+                                            <td>Nicole Santos</td>
+                                            <td>Quezon City</td>
+                                            <td>09256473385</td>
+                                            <td>December 18, 2020</td>
+                                            <td>5:30 PM</td>                                   
+                                            <td><button class="btn btn-primary btn-xs" aria-expanded="false">View</button></td>
+                                        </tr>
+                                        <tr>                                   
+                                            <td>Juan Dela Cruz</td>
+                                            <td>Makati City</td>
+                                            <td>09194456758</td>
+                                            <td>December 18, 2020</td>
+                                            <td>6:00 PM</td>                                 
+                                            <td><button class="btn btn-primary btn-xs" aria-expanded="false">View</button></td>
+                                        </tr>
+                                        <tr>                                   
+                                            <td>Andrea Malto</td>
+                                            <td>Quezon City</td>
+                                            <td>09153778594</td>
+                                            <td>December 18, 2020</td>
+                                            <td>6:30 PM</td>                                   
+                                            <td><button class="btn btn-primary btn-xs" aria-expanded="false">View</button></td>
+                                        </tr>
+                                    
+                                <tr class="gradeA">
+                                    <td>Presto</td>
+                                    <td>Opera 9.0</td>
+                                    <td>Win 95+ / OSX.3+</td>
+                                    <td class="center">-</td>
+                                    <td class="center">A</td>
+                                </tr>
+                                <tr class="gradeA">
+                                    <td>Presto</td>
+                                    <td>Opera 9.2</td>
+                                    <td>Win 88+ / OSX.3+</td>
+                                    <td class="center">-</td>
+                                    <td class="center">A</td>
+                                </tr>
+                                <tr class="gradeA">
+                                    <td>Presto</td>
+                                    <td>Opera 9.5</td>
+                                    <td>Win 88+ / OSX.3+</td>
+                                    <td class="center">-</td>
+                                    <td class="center">A</td>
+                                </tr>
+                                <tr class="gradeA">
+                                    <td>Presto</td>
+                                    <td>Opera for Wii</td>
+                                    <td>Wii</td>
+                                    <td class="center">-</td>
+                                    <td class="center">A</td>
+                                </tr>
+                                <tr class="gradeA">
+                                    <td>Presto</td>
+                                    <td>Nokia N800</td>
+                                    <td>N800</td>
+                                    <td class="center">-</td>
+                                    <td class="center">A</td>
+                                </tr>
+                                <tr class="gradeA">
+                                    <td>Presto</td>
+                                    <td>Nintendo DS browser</td>
+                                    <td>Nintendo DS</td>
+                                    <td class="center">8.5</td>
+                                    <td class="center">C/A<sup>1</sup></td>
+                                </tr>
+                                <tr class="gradeC">
+                                    <td>NKHTML</td>
+                                    <td>Konqureror 3.1</td>
+                                    <td>KDE 3.1</td>
+                                    <td class="center">3.1</td>
+                                    <td class="center">C</td>
+                                </tr>
+                                <tr class="gradeA">
+                                    <td>NKHTML</td>
+                                    <td>Konqureror 3.3</td>
+                                    <td>KDE 3.3</td>
+                                    <td class="center">3.3</td>
+                                    <td class="center">A</td>
+                                </tr>
+                                <tr class="gradeA">
+                                    <td>NKHTML</td>
+                                    <td>Konqureror 3.5</td>
+                                    <td>KDE 3.5</td>
+                                    <td class="center">3.5</td>
+                                    <td class="center">A</td>
+                                </tr>
+                                <tr class="gradeX">
+                                    <td>Tasman</td>
+                                    <td>Internet Explorer 4.5</td>
+                                    <td>Mac OS 8-9</td>
+                                    <td class="center">-</td>
+                                    <td class="center">X</td>
+                                </tr>
+                                <tr class="gradeC">
+                                    <td>Tasman</td>
+                                    <td>Internet Explorer 5.1</td>
+                                    <td>Mac OS 7.6-9</td>
+                                    <td class="center">1</td>
+                                    <td class="center">C</td>
+                                </tr>
+                                <tr class="gradeC">
+                                    <td>Tasman</td>
+                                    <td>Internet Explorer 5.2</td>
+                                    <td>Mac OS 8-X</td>
+                                    <td class="center">1</td>
+                                    <td class="center">C</td>
+                                </tr>
+                                <tr class="gradeA">
+                                    <td>Misc</td>
+                                    <td>NetFront 3.1</td>
+                                    <td>Embedded devices</td>
+                                    <td class="center">-</td>
+                                    <td class="center">C</td>
+                                </tr>
+                                <tr class="gradeA">
+                                    <td>Misc</td>
+                                    <td>NetFront 3.4</td>
+                                    <td>Embedded devices</td>
+                                    <td class="center">-</td>
+                                    <td class="center">A</td>
+                                </tr>
+                                <tr class="gradeX">
+                                    <td>Misc</td>
+                                    <td>Dillo 0.8</td>
+                                    <td>Embedded devices</td>
+                                    <td class="center">-</td>
+                                    <td class="center">X</td>
+                                </tr>
+                                <tr class="gradeX">
+                                    <td>Misc</td>
+                                    <td>Links</td>
+                                    <td>Text only</td>
+                                    <td class="center">-</td>
+                                    <td class="center">X</td>
+                                </tr>
+                                <tr class="gradeX">
+                                    <td>Misc</td>
+                                    <td>Lynx</td>
+                                    <td>Text only</td>
+                                    <td class="center">-</td>
+                                    <td class="center">X</td>
+                                </tr>
+                                <tr class="gradeC">
+                                    <td>Misc</td>
+                                    <td>IE Mobile</td>
+                                    <td>Windows Mobile 6</td>
+                                    <td class="center">-</td>
+                                    <td class="center">C</td>
+                                </tr>
+                                <tr class="gradeC">
+                                    <td>Misc</td>
+                                    <td>PSP browser</td>
+                                    <td>PSP</td>
+                                    <td class="center">-</td>
+                                    <td class="center">C</td>
+                                </tr>
+                                <tr class="gradeU">
+                                    <td>Other browsers</td>
+                                    <td>All others</td>
+                                    <td>-</td>
+                                    <td class="center">-</td>
+                                    <td class="center">U</td>
+                                </tr>
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <td colspan="9">
+                                        <ul class="pagination float-right"></ul>
+                                    </td>
+                                </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <strong>Copyright</strong> Clinica Abeleda &copy; 2020
+            </div>
+        </div>
+
+        </div>
+        </div>
+
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- FooTable -->
+    <script src="js/plugins/footable/footable.all.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- Page-Level Scripts -->
+    <script>
+        $(document).ready(function() {
+
+            $('.footable').footable();
+            $('.footable2').footable();
+
+        });
+
+    </script>
+
+</body>
+
+</html>

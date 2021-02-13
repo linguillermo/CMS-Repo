@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clinica Abeleda | Medicines</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+
+    <!-- FooTable -->
+    <link href="css/plugins/footable/footable.core.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <img alt="image" class="rounded-circle" src="img/New Project.png"/>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="block m-t-xs font-bold">Anna Santos</span>
+                                <span class="text-muted text-xs block">Staff <b class="caret"></b></span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                                <li><a class="dropdown-item" href="contacts.html">Contacts</a></li>
+                                <li><a class="dropdown-item" href="mailbox.html">Mailbox</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            CA
+                        </div>
+                    </li>
+                    <li>
+                        <a href="staff-dashboard.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
+                        
+                    </li>
+                    <li>
+                        <a href="staff-patient-records.html"><i class="fa fa-table"></i> <span class="nav-label">Patients</span></a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="staff-approved-appointments.html"><i class="fa fa-calendar"></i> <span class="nav-label">Appointments</span>  </a>
+                    </li>
+                    
+                    <li class="active">
+                        <a href="#"><i class="fa fa-table"></i> <span class="nav-label">Medicine Stocks</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li class="active"><a href="staff-medicines.html">Medicines</a></li>
+                            <li><a href="staff-stocks.html">Stocks</a></li>                        
+                        </ul>
+                    </li>
+                    
+                    
+                    
+                </ul>
+    
+            </div>
+        </nav>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+        <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+            <form role="search" class="navbar-form-custom" action="search_results.html">
+                <div class="form-group">
+                    <input type="text" placeholder="" class="form-control" name="top-search" id="top-search">
+                </div>
+            </form>
+        </div>
+        <ul class="nav navbar-top-links navbar-right">
+            <li>
+                <span class="m-r-sm text-muted welcome-message">Welcome to Clinica Abeleda</span>
+            </li>
+            
+            
+
+
+            <li>
+                <a href="login.html">
+                    <i class="fa fa-sign-out"></i> Log out
+                </a>
+            </li>
+            
+        </ul>
+
+        </nav>
+        </div>
+            
+        <div class="wrapper wrapper-content animated fadeInRight">
+
+            
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox ">
+                        <div class="ibox-title">
+                            <h5>Medicine List</h5>
+
+                            <div class="ibox-tools">
+                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal5">
+                                    Add Medicine
+                                </button>
+                            </div>
+
+                            <div class="modal inmodal fade" id="myModal5" tabindex="-1" role="dialog"  aria-hidden="true">
+                                <div class="modal-dialog modal-md">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h4 class="modal-title">New Medicine Form</h4>
+                                            
+                                        </div>
+                                        <div class="modal-body">
+                                            
+                                                <form method="get">
+                                                    
+                                                    <div class="form-group row"><label class="col-sm-4 col-form-label">Medicine Name</label>
+                                                        <div class="col-sm-8"><input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="hr-line-dashed"></div>
+                                                    <div class="form-group row"><label class="col-sm-4 col-form-label">Dosage</label>
+                                                        <div class="col-sm-8"><input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                </form>
+                                            
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn btn-primary">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="ibox-content">
+                            <input type="text" class="form-control form-control-sm m-b-xs" id="filter"
+                                   placeholder="Search for Medicine">
+
+                            <table class="footable table table-stripped" data-page-size="14" data-filter=#filter>
+                                <thead>
+                                    <tr>
+                                        <th style="width:20%;">Medicine </th>
+                                        <th style="width:60%;">Dosage </th>                                                                           
+                                        <th style="width:10%;">Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>                                                                          
+                                        <td>Diclofenac</td>
+                                        <td>100 mg</td>                                   
+                                        <td><a href="#" class="btn btn-info btn-xs">Edit</a>
+                                            <a href="#" class="btn btn-danger btn-xs">Delete</a></td>
+                                    </tr>
+                                    <tr>                                   
+                                        <td>Diclofenac</td>
+                                        <td>25 mg</td>                                   
+                                        <td><a href="#" class="btn btn-info btn-xs">Edit</a>
+                                            <a href="#" class="btn btn-danger btn-xs">Delete</a></td>
+                                    </tr>                                    
+                                    <tr>                                   
+                                        <td>Fluoxetine</td>
+                                        <td>20 mg</td>                                   
+                                        <td><a href="#" class="btn btn-info btn-xs">Edit</a>
+                                            <a href="#" class="btn btn-danger btn-xs">Delete</a></td>
+                                    </tr>
+                                    <tr>                                                                          
+                                        <td>Diclofenac</td>
+                                        <td>100 mg</td>                                   
+                                        <td><a href="#" class="btn btn-info btn-xs">Edit</a>
+                                            <a href="#" class="btn btn-danger btn-xs">Delete</a></td>
+                                    </tr>
+                                    <tr>                                   
+                                        <td>Diclofenac</td>
+                                        <td>25 mg</td>                                   
+                                        <td><a href="#" class="btn btn-info btn-xs">Edit</a>
+                                            <a href="#" class="btn btn-danger btn-xs">Delete</a></td>
+                                    </tr>
+                                    <tr>                                   
+                                        <td>Fluoxetine</td>
+                                        <td>20 mg</td>                                   
+                                        <td><a href="#" class="btn btn-info btn-xs">Edit</a>
+                                            <a href="#" class="btn btn-danger btn-xs">Delete</a></td>
+                                    </tr>
+                                    <tr>                                                                          
+                                        <td>Diclofenac</td>
+                                        <td>100 mg</td>                                   
+                                        <td><a href="#" class="btn btn-info btn-xs">Edit</a>
+                                            <a href="#" class="btn btn-danger btn-xs">Delete</a></td>
+                                    </tr>
+                                    <tr>                                   
+                                        <td>Diclofenac</td>
+                                        <td>25 mg</td>                                   
+                                        <td><a href="#" class="btn btn-info btn-xs">Edit</a>
+                                            <a href="#" class="btn btn-danger btn-xs">Delete</a></td>
+                                    </tr>
+                                    <tr>                                   
+                                        <td>Fluoxetine</td>
+                                        <td>20 mg</td>                                   
+                                        <td><a href="#" class="btn btn-info btn-xs">Edit</a>
+                                            <a href="#" class="btn btn-danger btn-xs">Delete</a></td>
+                                    </tr>
+                                    <tr>                                                                          
+                                        <td>Diclofenac</td>
+                                        <td>100 mg</td>                                   
+                                        <td><a href="#" class="btn btn-info btn-xs">Edit</a>
+                                            <a href="#" class="btn btn-danger btn-xs">Delete</a></td>
+                                    </tr>
+                                    <tr>                                   
+                                        <td>Diclofenac</td>
+                                        <td>25 mg</td>                                   
+                                        <td><a href="#" class="btn btn-info btn-xs">Edit</a>
+                                            <a href="#" class="btn btn-danger btn-xs">Delete</a></td>
+                                    </tr>
+                                    <tr>                                   
+                                        <td>Fluoxetine</td>
+                                        <td>20 mg</td>                                   
+                                        <td><a href="#" class="btn btn-info btn-xs">Edit</a>
+                                            <a href="#" class="btn btn-danger btn-xs">Delete</a></td>
+                                    </tr>
+                                    <tr>                                                                          
+                                        <td>Diclofenac</td>
+                                        <td>100 mg</td>                                   
+                                        <td><a href="#" class="btn btn-info btn-xs">Edit</a>
+                                            <a href="#" class="btn btn-danger btn-xs">Delete</a></td>
+                                    </tr>
+                                    <tr>                                   
+                                        <td>Diclofenac</td>
+                                        <td>25 mg</td>                                   
+                                        <td><a href="#" class="btn btn-info btn-xs">Edit</a>
+                                            <a href="#" class="btn btn-danger btn-xs">Delete</a></td>
+                                    </tr>
+                                    <tr>                                   
+                                        <td>Fluoxetine</td>
+                                        <td>20 mg</td>                                   
+                                        <td><a href="#" class="btn btn-info btn-xs">Edit</a>
+                                            <a href="#" class="btn btn-danger btn-xs">Delete</a></td>
+                                    </tr>
+                                    <tr>                                                                          
+                                        <td>Diclofenac</td>
+                                        <td>100 mg</td>                                   
+                                        <td><a href="#" class="btn btn-info btn-xs">Edit</a>
+                                            <a href="#" class="btn btn-danger btn-xs">Delete</a></td>
+                                    </tr>
+                                    <tr>                                   
+                                        <td>Diclofenac</td>
+                                        <td>25 mg</td>                                   
+                                        <td><a href="#" class="btn btn-info btn-xs">Edit</a>
+                                            <a href="#" class="btn btn-danger btn-xs">Delete</a></td>
+                                    </tr>
+                                   <tr>                                   
+                                        <td>Fluoxetine</td>
+                                        <td>20 mg</td>                                   
+                                        <td><a href="#" class="btn btn-info btn-xs">Edit</a>
+                                            <a href="#" class="btn btn-danger btn-xs">Delete</a></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <strong>Copyright</strong> Clinica Abeleda &copy; 2020
+            </div>
+        </div>
+
+        </div>
+        </div>
+
+        <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- FooTable -->
+    <script src="js/plugins/footable/footable.all.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Page-Level Scripts -->
+    <script>
+        $(document).ready(function() {
+
+            $('.footable').footable();
+            $('.footable2').footable();
+
+
+            var mem = $('#data_1 .input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
+            });
+
+            var yearsAgo = new Date();
+            yearsAgo.setFullYear(yearsAgo.getFullYear() - 20);
+
+            $('#selector').datepicker('setDate', yearsAgo );
+
+        });
+
+
+        
+
+    </script>
+
+</body>
+
+</html>
